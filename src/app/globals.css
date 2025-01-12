@@ -2,26 +2,1003 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.displayposition {
+  padding: 200px 0 0 0;
+}
+
+.Navbar {
+  animation: Nav 3s forwards;
+}
+
+@keyframes Nav {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.Bebas {
+  font-family: var(--font--Bebas);
+}
+
+/* --------------------Contact Icons---------------- */
+
+/* From Uiverse.io by Zameerahmad01 */
+
+.example-2 {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: 20px;
+  left: 40%;
+  transform: translateX(50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: 5px;
+}
+
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+
+.example-2 .icon-content a:hover {
+  color: white;
+}
+
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+  background-color: #00bcd4;
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"] ~ .tooltip {
+  background-color: #24262a;
+}
+
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(
+    45deg,
+    #00bcd4,
+    #00bcd4,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+  );
+}
+
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+  background-color: #ff0000;
+}
+
+/* --------------------What We do-------------- */
+.What_MainContainer {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.What_container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px;
+  height: 100%;
+  width: 90%;
+}
+
+.What_text-section {
+  width: 95%;
+  margin-right: 50px;
+}
+
+.What_text-section h2 {
+  color: #00bcd4;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.What_text-section h1 {
+  font-family: var(--font--Bebas);
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.What_text-section h1 span {
+  color: #00bcd4;
+}
+
+.What_text-section p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.What_text-section .What_view-all {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00bcd4;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.What_services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.What_service {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  border: 1.5px solid rgba(0, 0, 0, 0);
+  transition: all 00.5s ease-in;
+}
+
+.What_service:hover {
+  border: 1.5px solid white;
+}
+
+.What_service i {
+  font-size: 40px;
+  color: #00bcd4;
+  margin-bottom: 10px;
+}
+
+.What_service h3 {
+  font-family: var(--font--Bebas);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.What_service p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .What_container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .What_text-section {
+    margin-right: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .What_services {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .What_text-section h1 {
+    font-size: 28px;
+  }
+
+  .What_text-section h2 {
+    font-size: 20px;
+  }
+
+  .What_text-section p {
+    font-size: 12px;
+  }
+
+  .What_service i {
+    font-size: 30px;
+  }
+
+  .What_service h3 {
+    font-size: 16px;
+  }
+
+  .What_service p {
+    font-size: 12px;
+  }
+}
+
+/* ----------------------------WHY CHOOSE US-------------- */
+
+.Why_Mainconatiner {
+  margin: 0;
+  padding: 4% 0 0 0;
+}
+
+.Why_container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Why_container h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: white;
+  font-family: var(--font--Bebas);
+}
+
+.Why_container p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #adadad;
+  font-weight: var(--font-geist-mono);
+}
+
+.Why_highlight {
+  color: #00bcd4;
+  font-weight: bold;
+}
+
+.Why_stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.Why_stat {
+  width: 45%;
+  margin-bottom: 20px;
+}
+
+.Why_stat h2 {
+  font-size: 2.5em;
+  margin: 0;
+  color: #fffdfd;
+  font-family: var(--font--Bebas);
+}
+
+.Why_stat h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #00bcd4;
+  font-family: var(--font--Bebas);
+}
+
+.Why_stat p {
+  font-size: 0.9em;
+  font-weight: bolder;
+  color: #b1b1b1;
+  font-weight: var(--font-geist-mono);
+}
+
+@media (max-width: 768px) {
+  .Why_stat {
+    width: 100%;
+  }
+}
+
+/* ---------------------------------WORLD _________________ */
+
+.Worlddesktop {
+  display: block;
+}
+
+.Worldmobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .Worlddesktop {
+    display: none;
+  }
+
+  .Worldmobile {
+    display: block;
+  }
+}
+
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999;
+  /* so that it stays on top of all other elements */
+}
+
+/* From Uiverse.io by Yaya12085 */
+.githubbutton {
+  display: flex;
+  background-color: rgb(24, 23, 23);
+  color: #ffffff;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  gap: 0.75rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: 0.6s ease;
+}
+
+.githubbutton svg {
+  height: 30px;
+}
+
+.githubbutton:hover {
+  box-shadow: none;
+}
+
+/* From Uiverse.io by Yaya12085 */
+.Gogglebutton {
+  display: flex;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  gap: 0.75rem;
+  color: rgb(65, 63, 63);
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+
+.Gogglebutton svg {
+  height: 24px;
+}
+
+/* 
+.Gogglebutton:hover {
+  transform: scale(1.02);
+} */
+
+.DisplatText1 {
+  animation: Text1 1s forwards;
+  animation-delay: 10s;
+  font-family: var(--font--Bebas);
+  margin-top: -80px;
+}
+
+@keyframes Text1 {
+  0% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+.DisplatText2 {
+  animation: Text2 1s forwards;
+  animation-delay: 11s;
+  opacity: 0;
+  margin-top: -80px;
+  font-family: var(--font--Bebas);
+  font-size: 80px;
+}
+
+@media screen and (max-width: 480px) {
+  .DisplatText1 {
+    animation: Text1 1s forwards;
+    animation-delay: 10s;
+    margin-top: 80px;
+  }
+
+  .DisplatText2 {
+    animation: Text2 1s forwards;
+    animation-delay: 11s;
+    opacity: 0;
+    font-size: 40px;
+    margin-top: 40px;
+  }
+}
+
+@keyframes Text2 {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+
+/* From Uiverse.io by MuhammadHasann */
+.Navbarbutton {
+  --black-700: rgb(0, 0, 0);
+  --border_radius: 9999px;
+  --transtion: 0.3s ease-in-out;
+  --offset: 2px;
+
+  cursor: pointer;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  transform-origin: center;
+
+  padding: 1rem 2rem;
+  background-color: transparent;
+
+  border-radius: var(--border_radius);
+  transform: scale(calc(1 + (var(--active, 0) * 0.1)));
+
+  transition: transform var(--transtion);
+}
+
+.Navbarbutton::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid white;
+  width: 100%;
+  height: 80%;
+  background-color: var(--black-700);
+
+  border-radius: var(--border_radius);
+
+  transition: all var(--transtion);
+  z-index: 0;
+}
+
+.Navbarbutton::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid white;
+  width: 100%;
+  height: 80%;
+
+  background-position: top;
+
+  opacity: var(--active, 0);
+  border-radius: var(--border_radius);
+  transition: opacity var(--transtion);
+  z-index: 2;
+}
+
+.Navbarbutton:active {
+  transform: scale(1);
+}
+
+.Navbarbutton:hover .dots_border {
+  display: block;
+}
+
+.Navbarbutton .dots_border {
+  --size_border: calc(100% + 2px);
+
+  overflow: hidden;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: var(--size_border);
+  height: var(--size_border);
+  background-color: transparent;
+
+  border-radius: var(--border_radius);
+  z-index: -10;
+}
+
+.Navbarbutton .dots_border::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: left;
+  transform: rotate(0deg);
+
+  width: 80%;
+  height: 1rem;
+  background-color: white;
+
+  mask: linear-gradient(transparent 0%, white 120%);
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Navbarbutton .sparkle {
+  position: relative;
+  z-index: 10;
+
+  width: 1.75rem;
+}
+
+.Navbarbutton .sparkle .path {
+  fill: currentColor;
+  stroke: currentColor;
+
+  transform-origin: center;
+
+  color: hsl(0, 0%, 100%);
+}
+
+.Navbarbutton:is(:hover, :focus) .sparkle .path {
+  animation: path 1.5s linear 0.5s infinite;
+}
+
+.Navbarbutton .sparkle .path:nth-child(1) {
+  --scale_path_1: 1.2;
+}
+
+.Navbarbutton .sparkle .path:nth-child(2) {
+  --scale_path_2: 1.2;
+}
+
+.Navbarbutton .sparkle .path:nth-child(3) {
+  --scale_path_3: 1.2;
+}
+
+@keyframes path {
+  0%,
+  34%,
+  71%,
+  100% {
+    transform: scale(1);
+  }
+
+  17% {
+    transform: scale(var(--scale_path_1, 1));
+  }
+
+  49% {
+    transform: scale(var(--scale_path_2, 1));
+  }
+
+  83% {
+    transform: scale(var(--scale_path_3, 1));
+  }
+}
+
+.Navbarbutton .text_button {
+  position: relative;
+  z-index: 10;
+  background-image: linear-gradient(
+    90deg,
+    hsla(0 0% 100% / 1) 0%,
+    hsla(0 0% 100% / var(--active, 0)) 120%
+  );
+  background-clip: text;
+  color: transparent;
+  font-size: 1.5rem;
+}
+.circledisplay {
+  position: absolute;
+  width: 600px; /* Circle diameter */
+  height: 600px;
+  border-radius: 50%; /* Makes the div circular */
+  background-color: transparent; /* Circle background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures no overflow */
+  border: 8px dashed rgb(170, 166, 166);
+
+  animation: mainrotate 10s infinite;
+}
+
+@keyframes mainrotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ///////////////////////////////////////Resret Password================== */
+/* From Uiverse.io by Yaya12085 */
+/* From Uiverse.io by satyamchaudharydev */
+/* From Uiverse.io by gharsh11032000 */
+
+.resetform-container {
+  width: 40%;
+  background-color: #fff;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #212121;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 400px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+}
+@media screen and (max-width: 768px) {
+  .resetform-container {
+    width: 90%;
+  }
+}
+
+.resetform-container button:active {
+  scale: 0.95;
+}
+
+.resetform-container .resetlogo-container {
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.resetform-container .resetform {
+  display: flex;
+  flex-direction: column;
+}
+
+.resetform-container .resetform-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.resetform-container .resetform-group label {
+  font-size: 25px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.resetform-container .resetform-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+}
+
+.resetform-container .resetform-group input::placeholder {
+  opacity: 0.5;
+}
+
+.resetform-container .resetform-group input:focus {
+  outline: none;
+  border-color: #1778f2;
+}
+
+.resetform-container .resetform-submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  color: #fff;
+  background-color: #212121;
+  border: none;
+  width: 100%;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin: 12px 0;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+}
+
+.resetform-container reset.form-submit-btn:hover {
+  background-color: #313131;
+}
+
+.resetform-container .link {
+  color: #1778f2;
+  text-decoration: none;
+}
+
+.resetform-container .signup-link {
+  align-self: center;
+  font-weight: 500;
+}
+
+.resetform-container .signup-link .link {
+  font-weight: 400;
+}
+
+.resetform-container .link:hover {
+  text-decoration: underline;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.Detailslabellabel {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.inpdddut[type="file"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #1aa3bb;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.borde-number {
+  border: 1px solid #000000;
+  width: 95%;
+  z-index: 5;
+}
+/* ----------------------------------Poroject detyails---------------- */
+.react-phone-number-input {
+  /* Custom styles for the phone input container */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #000000;
+}
+.Foldercontainer {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+  border-radius: 15px;
+}
+
+.folder {
+  position: relative;
+  animation: float 2.5s infinite ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.folder:hover {
+  transform: scale(1.05);
+}
+
+.folder .top {
+  background: linear-gradient(135deg, #ff9a56, #ff6f56);
+  width: 30px;
+  height: 20px;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+  top: 30px;
+}
+
+.folder .bottom {
+  background: linear-gradient(135deg, #ffe563, #ffc663);
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 0 10px 10px 10px;
+  position: relative;
+  top: 20px;
+}
+
+.custom-file-upload {
+  font-size: 10px;
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0;
+  background: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+.custom-file-upload:hover {
+  background-color: black;
+  color: white;
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }

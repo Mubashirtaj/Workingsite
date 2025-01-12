@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.mobielnav {
+  height: 30px;
+  animation: mobnav 2s forwards;
+}
+
+@keyframes mobnav {
+  0% {
+    height: 30px;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+.bgani {
+  animation: bgan 2s forwards;
+}
+
+@keyframes bgan {
+  0% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: #000000;
+  }
+}
+
+.navbaricon {
+  display: flex;
+  animation: nav 2s forwards;
+}
+
+@keyframes nav {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.App {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 20;
+}
+
+.navMenu {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 253, 253);
+  font-size: 18px;
+}
+
+/* navbar */
+.navbar {
+  width: 90%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid red;
+  gap: 40px;
+  min-height: 70px;
+  border-radius: 20%;
+}
+
+/* logo  */
+.logo {
+  margin-top: 5%;
+  margin-left: -5%;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+/* ul  */
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  gap: 60px;
+}
+
+/* media queries */
+
+@media screen and (max-width: 780px) {
+  /* hamburger */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+  }
+
+  .bar {
+    background-color: #fff4f4;
+    width: 20px;
+    height: 3px;
+    display: block;
+    margin: 5px;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+
+  /* adding active className to the bars  */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* navMenu */
+
+  .navMenu::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .navMenu::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(255, 255, 255);
+    border-radius: 10px;
+  }
+
+  .navMenu::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.996);
+  }
+  .navMenu {
+    border-radius: 10px;
+    color: #fff4f4;
+    position: absolute;
+    flex-direction: column;
+    gap: 0;
+    top: 0px;
+    left: -110%;
+    text-align: start;
+    width: 100%;
+    transition: 0.7s ease-in-out;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+  }
+
+  .navMenu.active {
+    margin-left: 15%;
+    left: -5%;
+  }
+
+  .navMenu li {
+    color: #fff4f4;
+    margin: 16px 0;
+    margin-left: 25px;
+  }
+}
