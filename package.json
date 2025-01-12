@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@clerk/elements": "^0.19.9",
-    "@clerk/nextjs": "^6.5.2",
+    "@clerk/nextjs": "^6.9.9",
     "@hookform/resolvers": "^3.10.0",
     "@material-tailwind/react": "^2.1.10",
     "@radix-ui/react-alert-dialog": "^1.1.4",
