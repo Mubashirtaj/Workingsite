@@ -7,7 +7,6 @@ import { OurTeamBest } from "@/components/OurTeamcreatebest";
 import { ReviewsCards } from "@/components/Reviewscards";
 import Whatwedo from "@/components/Whatwedo";
 import Whychooseus from "@/components/Whychooseus";
-import CubePage from "@/Pagecomponents/Cubmodel";
 import TextShow from "@/Pagecomponents/ShowColorhide";
 
 export default function Home() {
@@ -25,7 +24,7 @@ export default function Home() {
       <ReviewsCards />
       <Contacticons />
       {/* <GlobeWorld /> */}
-      <CubePage />
+s
       <TextShow />
     </main>
   );
